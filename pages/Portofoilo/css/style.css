@@ -104,6 +104,9 @@ body {
     background-color: transparent;
     border-top-right-radius: 20%;
 }
+.content .card:hover i::before {
+    content: "\f07c";
+}
 .content .card:hover::before {
     width: 100%;
     border-top-right-radius: 20%;
