@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portofoilo</title>
+</head>
+<body>
+    <div class="service" id="web">
+        <div class="max-width">
+            <h1>Web Development</h1>
+            <div class="content">
+                <div class="card fw">
+                    <div class="box">
+                        <i class="fa-solid fa-code"></i>
+                        <h3> Coding (HTML , CSS , JAVASRIPT)</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fa-brands fa-wix"></i>
+                        <h3>Wix</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fa-solid fa-w" style="transform: skewX(-20deg);"></i>
+                        <h3>WebFlow</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fa-brands fa-wordpress-simple"></i>
+                        <h3>WordPress</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="service" id="photo">
+        <div class="max-width">
+            <h1>Graphic Design</h1>
+            <div class="content">
+                <div class="card full">
+                    <div class="box">
+                        <i class="fa-solid fa-code"></i>
+                        <h3> Graphic Design </h3>
+                    </div>
+                </div>
+       </div>
+    </div>
+   </div>             
+    <div class="service" id="video">
+        <div class="max-width">
+            <h1>Video Edit</h1>
+            <div class="content">
+                <div class="card full">
+                    <div class="box">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Video Edit</h3>
+                    </div>
+                </div>
+       </div>
+    </div>
+   </div>     
+           <!--  Start Menu -->
+           <div class="menu-parent">
+            <ul>
+                <li style="--i:4;"><a href="#web">Web Development</a></li>
+                <li style="--i:3;"><a href="#photo">Graphic Design</a></li>
+                <li style="--i:2;"><a href="#video">Video Edit</a></li>
+            </ul>
+        </div>
+           <!--  End Menu -->
+           <script>
+               let links = document.querySelectorAll(".menu-parent li");
+                let linksArray = Array.from(links);
+
+               linksArray.forEach((ele) => {
+  ele.addEventListener("click", function (e) {
+    // console.log(ele);
+    linksArray.forEach((ele) => {
+      ele.classList.remove("active");
+    });
+    e.currentTarget.classList.add("active");
+  });
+});
+           </script>
+</body>
+</html>
