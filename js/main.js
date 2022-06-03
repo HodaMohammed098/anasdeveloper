@@ -4,6 +4,8 @@ let scrollDown = document.querySelector(".scroll");
 let toogle = document.querySelector(".menu");
 let social = document.querySelector(".social-links");
 let useful = document.querySelector(".useful-links");
+let span = document.querySelectorAll(".sp");
+
 
 toogle.onclick = function () {
     social.classList.toggle("show")
@@ -24,3 +26,11 @@ setTimeout(function () {
 },10000)
 
 
+scrollDown.onclick = function () {
+    setTimeout(function () {
+        span[0].style.color = "#0534f1"
+        span[1].style.color = "#f16f05"
+        span[2].style.color = "#05f140"
+        span[3].style.color = "#f10505"
+        } , 1500)
+}

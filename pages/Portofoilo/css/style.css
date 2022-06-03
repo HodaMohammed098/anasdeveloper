@@ -168,7 +168,9 @@ body {
 .menu-parent ul li.active {
     background-color: #009688;
     transform: translateX(50px);
-    color: #fff;
+}
+.menu-parent ul li.active a {
+    color: #fff !important;
 }
 .menu-parent ul li a {
     text-decoration: none;
@@ -203,5 +205,8 @@ body {
 }
 .menu-parent ul li:hover a {
     color: #fff;
+}
+a {
+    text-decoration: none;
 }
 /* End Menu */
