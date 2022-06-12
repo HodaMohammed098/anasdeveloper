@@ -111,30 +111,8 @@ body {
 .portofolio::before{
     display: none;
 }
-.portofolio::after {
-    content: 'Click To See Portofoilo';
-    font-size: 15px;
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #aaa;
-    background: #ffeb3b;
-    width: 173px;
-    height: 21px;
-    border-radius: 20px;
-    opacity: 0;
-    transition: .5s;
-}
 .portofolio:hover{
     background-color: transparent !important;
-}
-.portofolio:hover::after{
-    opacity: 1;
-    top: 10px;
-    background-color: transparent;
-    color: #ffeb3b;
-
 }
 .diffrent{
     transition: .5s;
