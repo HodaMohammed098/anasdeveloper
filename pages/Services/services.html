@@ -18,7 +18,8 @@
         </h2>
     </div>
     <!-- Text -->
-    <div class="service" id="all">
+    <div class="parentAll">
+        <div class="service" id="all">
         <div class="max-width">
             <h1>Our Service</h1>
             <div class="content">
@@ -172,14 +173,17 @@
         </ul>
     </div>
     <!-- Menu -->
+    </div>
     <script>
         let text = document.querySelector(".text");
        let links = document.querySelectorAll(".menu-hover a");
        let linksArray = Array.from(links);
+        let all = document.querySelector(".parentAll")
 
 
        setTimeout(function () {
-           text.style.display = "none"
+            text.style.display = "none";
+           all.style.display = "block";
        },3000)
        linksArray.forEach((ele) => {
   ele.addEventListener("click", function (e) {
