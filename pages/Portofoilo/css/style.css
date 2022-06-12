@@ -50,9 +50,9 @@ body {
     z-index: 1100;
 }
  .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;   
+    display: grid; 
+    grid-template-columns: repeat(auto-fill , minmax(500px , 1fr));
+    gap: 40px;
 }
  .content .card {
     padding: 50px 25px;
@@ -94,15 +94,9 @@ body {
     top: 5px;
     opacity: 1;
 }
-@media (max-width:767px) {
-     .content .card {
-        flex-basis: 100% !important;
-        margin-bottom: 20px;
-    }
-}
 .content .card:hover {
     background-color: transparent;
-    border-top-right-radius: 20%;
+    border-top-right-radius: 10%;
 }
 .content .card:hover i::before {
     content: "\f07c";
@@ -133,13 +127,10 @@ body {
  .content .card .box p {
     line-height: 1.5;
 }
-.content .full {
-    flex-basis: 70%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.content .full:hover{
-    flex-basis: 90%;
+.full {
+    grid-template-columns: 1fr;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 /* Start Menu */
 .menu-parent {
@@ -169,10 +160,10 @@ body {
     background-color: #009688;
     transform: translateX(50px);
 }
-.menu-parent ul li.active a {
+.menu-parent ul li.active {
     color: #fff !important;
 }
-.menu-parent ul li a {
+.menu-parent ul a {
     text-decoration: none;
     color: #999;
     display: block;
@@ -210,3 +201,33 @@ a {
     text-decoration: none;
 }
 /* End Menu */
+/* Start Logo */
+.logo {
+    position:fixed;
+    top: 10px;
+    right: 10%;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-shadow: 3px 2px 20px #e6e6e7;
+    cursor: default;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    animation: logoAnimate 3s linear infinite;
+}
+@keyframes logoAnimate {
+    0% , 100%  {
+        top: 10px;
+        transform: skew(0deg , 0deg);
+        color: #ffeb3b;
+    }
+    50% {
+        top: 20px;
+        transform: skew(5deg , 5deg);
+        color: #38a8b3;
+    }
+    80% {
+        top: 15px;
+        color: #33a3ee;
+    }
+}
+/* ENd Logo */
