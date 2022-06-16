@@ -26,6 +26,7 @@ div.main {
     box-shadow: -1px 1px 15px 1px #777;
     transition: .3s;
     transition-delay: .2s;
+    margin-bottom: 60px;
 }
 div img {
     max-width: 50%;
