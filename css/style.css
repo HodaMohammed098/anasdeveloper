@@ -358,6 +358,7 @@ a {
     overflow: hidden;
     transition: .5s;
     width: fit-content;
+    display: block;
 }
 .hero .tour a {
     color: #fbfcfb;
