@@ -368,3 +368,8 @@ footer .wave#wave4 {
     animation-delay: .4s;
 }
 /* Text */
+@media (max-width:767px) {
+    .menu-hover ul li a {
+        font-size : 13px ; 
+    }
+}
