@@ -14,11 +14,6 @@ body {
 .service {
     padding: 100px 0;
 }
-.max-width {
-    max-width: 1300px;
-    padding: 0 45px;
-    margin: auto;
-}
 .max-width h1 {
     font-size: 40px;
     text-align: center;
@@ -45,13 +40,13 @@ body {
     transform: translateX(-50%);
     width: 11px;
     height: 10px;
-    background: #9e9e9e;
     border-radius: 50%;
     z-index: 1100;
 }
  .content {
-    display: grid; 
-    grid-template-columns: repeat(auto-fill , minmax(500px , 1fr));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 40px;
 }
  .content .card {
@@ -63,7 +58,7 @@ body {
     cursor: pointer;
     transition: all .5s;
     position: relative;
-    margin-bottom: 20px;
+    margin: 0 20px 20px
 }
  .content .card::before {
     content: "";
