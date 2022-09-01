@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 .parent {
-    max-height: 100vh;
     background: linear-gradient(40deg , #fbda61 , #ff5acd);
     padding-top: 100px;
     padding-bottom: 100px;
@@ -134,5 +133,34 @@ div p a {
     }
     100% {
         padding-top: 100px;
+    }
+}
+.d-flex {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: relative;
+    margin-bottom: 100px;
+    transition: .3s;
+}
+.d-flex::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    width: 70%;
+    height: 4px;
+    background: #2196f3;
+    border-radius: 20px;
+    transition: .3s;
+}
+.d-flex:hover::after {
+    background-color: #777;
+    bottom: -25px;
+}
+@media (max-width:767px) {
+    .d-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
     }
 }
